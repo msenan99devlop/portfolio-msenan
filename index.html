@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammed Senan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/galaxy.mp4" type="video/mp4">
+  </video>
+  <section class="main-section">
+    <nav>
+      
+      <ul>
+        <br>
+        <br>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contactus.html">Contact Me</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-info">
+        <h3><span style="color: aqua;font-size:xx-large;">Full</span> <span style="color: rgb(107, 150, 231) ;font-size: x-large;">Stack</span></h3>
+        <h1>Hello,I'm Mohsmmed Senan  </h1>
+        <h2> Web Developer</h2>
+        <p>I create high-performance, responsive websites through clean code and purpose-driven design.</p>
+        <div class="hero-icons">
+          <button class="btn">Download CV</button> 
+          <ul class="ul-icons">
+            <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+            <li><a href="#"><i class='bx bxl-twitter'></i></a></li>
+            <li><a href="#"><i class='bx bxl-github'></i></a></li>
+            <li><a href="#"><i class='bx bxl-facebook-circle'></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img src="images/man1.png" alt="person-img">
+      </div>
+    </div>
+
+    <div class="info-sec">
+      <div class="info-card">
+        <h1>3+ </h1>
+        <p>Experience </p>
+      </div>
+      <div class="info-card">
+        <h1>20+</h1>
+        <p>Skills</p>
+      </div>
+      <div class="info-card">
+        <h1>40+</h1>
+        <p>Projects Completed</p>
+      </div>
+      <div class="info-card">
+        <h1>100+</h1>
+        <p>Satisfied Clients</p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    // Adding fade-up animations on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const elementsToAnimate = document.querySelectorAll('.hero-info > *, .hero-img, .info-card');
+      
+      elementsToAnimate.forEach((element, index) => {
+        element.classList.add('fade-up');
+        element.classList.add(`delay-${index % 3}`);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title> Hide And Unhide Text</title>
+    background=
+    <style>
+        #myText {
+            padding: 20px;
+          background: linear-gradient(to bottom, #2b63db, #1a3a8f);
+            border: 2px solid #d40020;
+            margin: 20px auto;
+            width: 400px;
+            text-align: center;
+            font-size: 25px;
+            border-radius: 20px;
+            color: red;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #00d400;
+            color: white;
+            border: red;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s;
+        }
+
+        button:hover {
+            background-color: #2935df;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="myText">! This Text can be hiden and unhiden </div>
+    <button id="toggleButton" onclick="toggleText()">Hide Text</button>
+    
+    <script>
+        function toggleText() {
+            let text = document.getElementById("myText");
+            let button = document.getElementById("toggleButton");
+
+            if (text.style.display === "none") {
+                text.style.display = "block";     
+                button.textContent = "Hide text"; 
+            } else {
+                text.style.display = "none";    
+                button.textContent = "Unhide text";
+            }
+        }
+    </script>
+
+</body>
+</html>

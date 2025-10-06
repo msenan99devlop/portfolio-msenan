@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0a2647 0%, #2c74b3 100%);
+  color: #e6f3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.back-vid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%) blur(4px);
+}
+
+.main-section {
+  width: 90%;
+  max-width: 1280px;
+  padding: 25px 0;
+  background: rgba(4, 1, 71, 0.334);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  border: 20px solid rgba(236, 63, 15, 0.167);
+  box-shadow: 0 20px 50px -10px rgba(61, 49, 194, 0.25), 
+              0 15px 40px -5px rgba(36, 56, 212, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: 20px 60px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+nav h1 {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: px;
+  display: flex;
+  align-items: center;
+}
+
+nav h1 span {
+  color: #179fbe;
+  text-shadow: 0 0 10px rgba(18, 199, 223, 0.5);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #c2d8f0;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  padding: 6px 0;
+  transition: color .20s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #2c74b3, #04b8f4);
+  transition: width .3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fff;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 0 10%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.hero-info {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero h1 {
+  font-size: 40px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #479ae3, #dce5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: #c2d8f0;
+}
+
+.hero p {
+  max-width: 500px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #f3f4f4;
+}
+
+.hero-icons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top:30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #61aced, #60cbef);
+  border: none;
+  border-radius: 12px;
+  font-weight: 900;
+  color: #eef1f2;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform .3s, box-shadow .4s;
+  animation: pulse 4s infinite;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(45, 156, 225, 0.4);
+}
+
+.ul-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ul-icons a {
+  display:inline-flexbox;
+  padding: 10px;
+  border: 2px solid rgba(248, 244, 244, 0.1);
+  border-radius: 50%;
+  font-size: 35px;
+  color: #1ecaca;
+  background: rgba(4, 131, 229, 0.05);
+  position: relative;
+  transition:all.3s;
+}
+
+.ul-icons a i {
+  background: linear-gradient(90deg, #ccdfe1, #1cd3f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:rgb(23, 203, 219);
+  transition: all .3s;
+}
+
+.ul-icons a:hover {
+  background: linear-gradient(135deg, #50a0e6, #45b0ee);
+  color: #decdcd;
+  box-shadow: 0 15px 40px rgba(38, 191, 221, 0.35);
+  border-color: transparent;
+}
+
+.ul-icons a:hover i {
+  -webkit-text-fill-color: #ece1e1;
+}
+
+.hero-img {
+  flex: 0 0 350px;
+  width: 330px;
+  height: 330px;
+  border-radius: 85%;
+  overflow:hidden;
+  box-shadow: 0 30px 70px -10px rgba(7, 208, 226, 0.35), 
+              0 10px 60px -5px rgba(6, 198, 241, 0.848);
+  transition: transform .6s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid rgba(6, 6, 237, 0.1);
+  background: rgba(58, 172, 218, 0.05);
+}
+
+.hero-img:hover {
+  transform: scale(1.05);
+}
+
+.hero-img img {
+  width: 167%;
+  height: 160%;
+  object-fit: contain;
+  mix-blend-mode: normal;
+}
+
+.info-sec {
+  display: flex;
+  padding: 40px 10%;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  flex: 1 1 180px;
+  background: rgba(68, 206, 206, 0.05);
+  border-radius: 15px;
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+  transition: transform .3s;
+  border: 1px solid rgba(235, 210, 210, 0.08);
+}
+
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #d0d6db, #cdd4d9);
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px -5px rgba(140, 183, 220, 0.3);
+}
+
+.info-card h1 {
+  font-size: 40px;
+  margin-bottom: 6px; 
+  background: linear-gradient(90deg, #8ebbe8, #a6d6e2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info-card p {
+  color: #eaeef2;
+  font-size: 18px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(44, 116, 179, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(17, 175, 233, 0.6);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-info {
+    align-items: center;
+  }
+  
+  nav {
+    justify-content: center;
+  }
+  
+  nav ul {
+    justify-content: center;
+  }
+}
