@@ -1,0 +1,447 @@
+/* ==============================================
+   ملف التجاوب لموقع Mohammed Senan
+   تم تصميمه خصيصاً للعمل مع الكود الحالي
+============================================== */
+
+/* ===== شاشات كبيرة - ديسكتوب (1200px فما فوق) ===== */
+@media (min-width: 1200px) {
+    .main-section {
+        max-width: 1400px;
+        margin: 2rem auto;
+    }
+    
+    .hero {
+        gap: 80px;
+    }
+    
+    .hero-info h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-img {
+        flex: 0 0 400px;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/* ===== شاشات متوسطة - لابتوب (992px - 1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hero {
+        gap: 50px;
+    }
+    
+    .hero-info h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-img {
+        flex: 0 0 320px;
+        width: 320px;
+        height: 320px;
+    }
+    
+    .info-sec {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+/* ===== شاشات صغيرة - تابلت (768px - 991px) ===== */
+@media (max-width: 991px) {
+    .main-section {
+        width: 95%;
+        border: 15px solid rgba(236, 63, 15, 0.167);
+        border-radius: 30px;
+    }
+    
+    nav {
+        padding: 15px 40px;
+        gap: 20px;
+    }
+    
+    nav ul {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    nav a {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 0 5%;
+        margin-top: 20px;
+    }
+    
+    .hero-info {
+        align-items: center;
+        flex: 1 1 100%;
+    }
+    
+    .hero-info h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-info h2 {
+        font-size: 1.4rem;
+    }
+    
+    .hero-info p {
+        font-size: 1.1rem;
+        max-width: 600px;
+    }
+    
+    .hero-img {
+        flex: 0 0 280px;
+        width: 280px;
+        height: 280px;
+        order: -1;
+    }
+    
+    .hero-img img {
+        width: 140%;
+        height: 140%;
+    }
+    
+    .info-sec {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 30px 5%;
+    }
+    
+    .hero-icons {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .btn {
+        padding: 12px 28px;
+        font-size: 1.1rem;
+    }
+    
+    /* إخفاء الفيديو على التابلت لتوفير الأداء */
+    .back-vid {
+        display: none;
+    }
+    
+    body {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    }
+}
+
+/* ===== شاشات صغيرة جداً - موبايل (767px فما دون) ===== */
+@media (max-width: 767px) {
+    .main-section {
+        width: 98%;
+        padding: 15px 0;
+        border: 10px solid rgba(236, 63, 15, 0.167);
+        border-radius: 25px;
+        margin: 1rem auto;
+    }
+    
+    nav {
+        padding: 10px 20px;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    nav ul br {
+        display: none;
+    }
+    
+    nav a {
+        font-size: 16px;
+        padding: 10px 15px;
+        display: block;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+    }
+    
+    .hero {
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .hero-info h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero-info h2 {
+        font-size: 1.2rem;
+    }
+    
+    .hero-info h3 span {
+        font-size: 1.8rem !important;
+    }
+    
+    .hero-info h3 span:last-child {
+        font-size: 1.4rem !important;
+    }
+    
+    .hero-info p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .hero-img {
+        flex: 0 0 220px;
+        width: 220px;
+        height: 220px;
+    }
+    
+    .hero-img img {
+        width: 130%;
+        height: 130%;
+    }
+    
+    .info-sec {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .info-card {
+        padding: 20px 15px;
+    }
+    
+    .info-card h1 {
+        font-size: 2rem;
+    }
+    
+    .info-card p {
+        font-size: 1rem;
+    }
+    
+    .hero-icons {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+    
+    .ul-icons {
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .ul-icons a {
+        font-size: 28px;
+        padding: 12px;
+    }
+}
+
+/* ===== شاشات صغيرة جداً - موبايل صغير (480px فما دون) ===== */
+@media (max-width: 480px) {
+    .main-section {
+        border: 8px solid rgba(236, 63, 15, 0.167);
+        border-radius: 20px;
+    }
+    
+    nav {
+        padding: 8px 15px;
+    }
+    
+    nav a {
+        font-size: 15px;
+        padding: 12px 10px;
+    }
+    
+    .hero {
+        padding: 0 15px;
+        gap: 25px;
+    }
+    
+    .hero-info h1 {
+        font-size: 1.7rem;
+    }
+    
+    .hero-info h2 {
+        font-size: 1.1rem;
+    }
+    
+    .hero-info h3 span {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-info h3 span:last-child {
+        font-size: 1.2rem !important;
+    }
+    
+    .hero-info p {
+        font-size: 0.9rem;
+    }
+    
+    .hero-img {
+        flex: 0 0 180px;
+        width: 180px;
+        height: 180px;
+    }
+    
+    .info-card {
+        padding: 18px 12px;
+    }
+    
+    .info-card h1 {
+        font-size: 1.8rem;
+    }
+    
+    .info-card p {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .ul-icons a {
+        font-size: 24px;
+        padding: 10px;
+    }
+}
+
+/* ===== شاشات صغيرة جداً - أجهزة قديمة (360px فما دون) ===== */
+@media (max-width: 360px) {
+    .hero-info h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-info h2 {
+        font-size: 1rem;
+    }
+    
+    .hero-img {
+        flex: 0 0 150px;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .info-card h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ===== تحسينات للأداء واللمس ===== */
+@media (max-width: 767px) {
+    /* تحسينات اللمس */
+    .btn, nav a, .ul-icons a {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* منع التكبير في حقول الإدخال على iOS */
+    input, select, textarea {
+        font-size: 16px;
+    }
+    
+    /* تحسين الأداء */
+    .hero-img {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+}
+
+/* ===== تحسينات للشاشات العمودية ===== */
+@media (max-width: 767px) and (orientation: portrait) {
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    
+    .main-section {
+        min-height: calc(100vh - 2rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+/* ===== تحسينات للشاشات الأفقية ===== */
+@media (max-width: 991px) and (orientation: landscape) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .hero-info {
+        align-items: flex-start;
+    }
+    
+    .hero-img {
+        order: 2;
+    }
+}
+
+/* ===== تحسينات للطباعة ===== */
+@media print {
+    .back-vid,
+    .hero-img,
+    .ul-icons,
+    .btn {
+        display: none !important;
+    }
+    
+    .main-section {
+        background: white !important;
+        color: black !important;
+        border: 2px solid #ccc !important;
+        box-shadow: none !important;
+    }
+    
+    nav a {
+        color: black !important;
+    }
+}
+
+/* ===== تحسينات للوضع الداكن ===== */
+@media (prefers-color-scheme: dark) {
+    /* الموقع يدعم الوضع الداكن بالفعل */
+}
+
+/* ===== تحسينات للحركة المختزلة ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-img:hover {
+        transform: none;
+    }
+    
+    .info-card:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}
